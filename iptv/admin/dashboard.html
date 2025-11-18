@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - CineStream</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .admin-main { padding-top: 100px; max-width: 1200px; margin: 0 auto; padding-bottom: 50px; }
+        .admin-main h2 { text-align: center; margin-bottom: 1.5rem; }
+        .movie-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+        .movie-table th, .movie-table td { padding: 12px 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); text-align: left; }
+        .movie-table th { background-color: rgba(229, 9, 20, 0.2); }
+        .movie-table tr:hover { background-color: rgba(255, 255, 255, 0.05); }
+        .action-btns button { padding: 5px 10px; margin-right: 5px; cursor: pointer; border: none; border-radius: 4px; }
+        .btn-edit { background-color: #007bff; color: white; }
+        .btn-delete { background-color: var(--primary-color); color: white; }
+        .btn-add { margin-bottom: 1rem; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-search">
+            <div class="logo"><a href="../index.html"><h1>CineStream Admin</h1></a></div>
+            <a href="../auth/logout.php" class="logout-button"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </nav>
+    </header>
+    <main class="admin-main">
+        <h2>Gestão de Filmes Locais</h2>
+        <button class="primary-button btn-add" id="add-movie-btn"><i class="fas fa-plus"></i> Adicionar Novo Filme</button>
+        <div id="movie-list-container">
+            <p id="loading-message">Carregando filmes...</p>
+        </div>
+    </main>
+    <script src="../js/admin.js"></script> 
+</body>
+</html>
